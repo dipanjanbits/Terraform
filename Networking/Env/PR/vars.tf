@@ -1,0 +1,13 @@
+variable "region" {}
+variable "profile" {}
+variable "cidr" {}
+variable "public_sub_cidr_1" {}
+variable "public_sub_cidr_2" {}
+variable "private_sub_cidr_1" {}
+variable "private_sub_cidr_2" {}
+variable "availability_zone_1" {}
+variable "availability_zone_2" {}
+variable "reg" {}
+variable "city" {}
+variable "env" {}
+variable "sr_no" {}
