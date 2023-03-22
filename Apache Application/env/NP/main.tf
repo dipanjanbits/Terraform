@@ -1,0 +1,33 @@
+module "app-server-1"{
+	source              	= "../../modules/ec2"
+	vpc_id         			= "${var.vpc_id}"
+	sg_name					= "esg-${var.ec2_name_1}-${var.env}-${var.reg}-${var.city}-01"
+	sg_desc					= "${var.sg_desc}"
+	subnet_id				= "${var.subnet_id_1}"
+	private_ips				= "${var.private_ips_1}"
+	eni_name		   		= "eni-${var.ec2_name_1}-${var.env}-${var.reg}-${var.city}-01"
+	ami_id				   	= "${var.ami_id}"
+	avb_zone				= "${var.avb_zone_1}"
+	instance_type			= "${var.instance_type}"
+	user_data				= "${file("ec2-user-data.sh")}"
+	key_name				= "${var.key_name}"
+	ec2_name				= "${var.ec2_name_1}"
+	env				   		= "${var.env}"
+}
+
+module "app-server-2"{
+	source              	= "../../modules/ec2"
+	vpc_id         			= "${var.vpc_id}"
+	sg_name					= "esg-${var.ec2_name_2}-${var.env}-${var.reg}-${var.city}-02"
+	sg_desc					= "${var.sg_desc}"
+	subnet_id				= "${var.subnet_id_2}"
+	private_ips				= "${var.private_ips_2}"
+	eni_name		   		= "eni-${var.ec2_name_2}-${var.env}-${var.reg}-${var.city}-02"
+	ami_id				   	= "${var.ami_id}"
+	avb_zone				= "${var.avb_zone_2}"
+	instance_type			= "${var.instance_type}"
+	user_data				= "${file("ec2-user-data.sh")}"
+	key_name				= "${var.key_name}"
+	ec2_name				= "${var.ec2_name_2}"
+	env				   		= "${var.env}"
+}
