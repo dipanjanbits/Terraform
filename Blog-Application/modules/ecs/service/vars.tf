@@ -1,0 +1,11 @@
+variable "app_name" {}
+variable "env" {}
+variable "service_name" {}
+variable "cluster_arn" {}
+variable "td" {}
+variable "tg_arn" {}
+variable "container_name" {}
+variable "subnet_id" {}
+variable "sg_name" {}
+variable "sg_desc" {}
+variable "vpc_id" {}

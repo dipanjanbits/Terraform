@@ -1,0 +1,9 @@
+variable "app_name" {}
+variable "env" {}
+variable "family" {}
+variable "cpu" {}
+variable "memory" {}
+variable "task_role_arn" {}
+variable "container_name" {}
+variable "container_image" {}
+variable "region" {}
